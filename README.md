@@ -28,13 +28,13 @@ Users should be able to:
 ### Screenshot
 
 ![](./output/d.png)
-![](./output/m.png)
+<img src="./output/m.png" width="50%">
 
 
 ### Links
 
-- Solution URL: [click me](https://your-solution-url.com)
-- Live Site URL: [click me](https://your-live-site-url.com)
+- Solution URL: [click me](https://github.com/arunsingh009/frontendmentorchallenge10)
+- Live Site URL: [click me](https://arunsingh009.github.io/frontendmentorchallenge10/)
 
 ## My process
 
