@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+:root {
+  --n1: hsl(0, 0%, 81%);
+  --n2: hsl(210, 46%, 95%);
+  --p1: hsl(263, 55%, 52%);
+  --p2: hsl(217, 19%, 35%);
+  --p3: hsl(219, 29%, 14%);
+  --p4: hsl(0, 0%, 100%);
+}
+main {
+  height: 100vh;
+  width: 100%;
+  background: var(--n2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  height: 500px;
+  width: 950px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 8px;
+  column-gap: 8px;
+  grid-row: 2;
+}
+.item {
+  border: 1px solid var(--n1);
+  grid-template-columns: minmax(3, 1fr) 300px;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-auto-flow: row;
+  padding: 10px 0px;
+}
+.item1 {
+  grid-area: 1 / 4 / span 2 / span 1;
+  background: var(--p4);
+  padding: 20px 10px;
+}
+.item2 {
+  grid-column: 1 / span 2;
+  background: var(--p1);
+}
+.item3 {
+  grid-area: 2 / 1 / span 1 / span 1;
+  background: var(--p4);
+  padding: 20px 20px;
+}
+.item4 {
+  background: var(--p2);
+}
+.item5 {
+  grid-column: 2 / span 2;
+  background: var(--p3);
+  padding: 20px 10px;
+}
+/* content styling starts from here  */
+.logo,
+.head,
+.para {
+  width: 90%;
+  height: fit-content;
+}
+.bold {
+  color: var(--n2);
+  font-weight: 600;
+}
+.bold2 {
+  color: hsl(219, 29%, 14%);
+  font-weight: 700;
+}
+.dim {
+  color: hsl(210, 46%, 95%, 50%);
+  font-weight: 400;
+}
+.dim1 {
+  color: hsl(210, 46%, 95%, 70%);
+  font-weight: 400;
+}
+.dim2 {
+  color: hsl(219, 29%, 14%, 75%);
+  font-weight: 400;
+}
+/* name and image styling begins from here */
+.person,
+.person1 {
+  display: grid;
+  align-items: center;
+  justify-items: left;
+  grid-auto-flow: column;
+}
+.person {
+  width: 40%;
+}
+.person1 {
+  width: 80%;
+}
+.name p {
+  font-size: 13px;
+}
+.logo img {
+  border-radius: 100%;
+  height: 40px;
+  width: 40px;
+}
+/* Ends here  */
+.head h1 {
+  font-size: 17.5px;
+  /* color: white; */
+}
+.para p {
+  font-size: 12px;
+}
+
+@media (max-width: 1000px) {
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  main {
+    height: fit-content;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .card {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    height: fit-content;
+  }
+  .logo,
+  .head,
+  .para {
+    margin: 10px 0px;
+  }
+  .item {
+    width: 100%;
+    height: fit-content;
+    padding: 30px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+  .person1 {
+    width: 40%;
+  }
+}
+@media (max-width: 650px) {
+  .card {
+    width: 90%;
+  }
+  .item {
+    width: 80%;
+  }
+  .person1,
+  .person {
+    width: 80%;
+  }
+}
